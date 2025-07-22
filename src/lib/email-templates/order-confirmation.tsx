@@ -46,7 +46,7 @@ export const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
         </p>
         
         <p style={{ fontSize: '16px', marginBottom: '20px' }}>
-          Thank you for your order! We're excited to confirm that we've received your payment.
+          Thank you for your order! We&apos;re excited to confirm that we&apos;ve received your payment.
         </p>
         
         <div
@@ -83,7 +83,7 @@ export const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
         </div>
         
         <p style={{ fontSize: '14px', color: '#6b7280', marginBottom: '10px' }}>
-          If you have any questions about your order, please don't hesitate to contact us.
+          If you have any questions about your order, please don&apos;t hesitate to contact us.
         </p>
         
         <p style={{ fontSize: '14px', color: '#6b7280' }}>

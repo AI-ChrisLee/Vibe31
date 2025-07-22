@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import { CheckoutButton } from "@/components/CheckoutButton"
 import { ScrollToPricingButton } from "@/components/ScrollToPricingButton"
 
@@ -121,7 +120,7 @@ export default function Home() {
         <div className="container">
           <div className="mx-auto max-w-4xl text-center mb-12 md:mb-16 px-4">
             <p className="text-xs sm:text-sm font-bold text-red-600 uppercase tracking-wider mb-3">The Problem</p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black">You're Stuck in the Agency Trap</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black">You&apos;re Stuck in the Agency Trap</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Problem 1 */}
@@ -164,7 +163,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl sm:text-2xl font-black mb-2 sm:mb-3 text-gray-900">Revenue Ceiling</h3>
                 <p className="text-sm sm:text-base font-medium text-gray-600 leading-relaxed">
-                  More clients = more stress. Can't scale without hiring an army.
+                  More clients = more stress. Can&apos;t scale without hiring an army.
                 </p>
               </div>
             </div>
@@ -533,8 +532,8 @@ export default function Home() {
                 <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-2">
                   <p className="text-sm sm:text-base font-medium text-gray-600 leading-relaxed">
                     Basic HTML/CSS understanding helps, but not required. We use AI tools (Cursor + Claude) 
-                    that write 80% of the code for you. If you can follow instructions and aren't afraid 
-                    to Google, you'll do fine. Many students start with minimal coding knowledge.
+                    that write 80% of the code for you. If you can follow instructions and aren&apos;t afraid 
+                    to Google, you&apos;ll do fine. Many students start with minimal coding knowledge.
                   </p>
                 </div>
               </details>
@@ -549,8 +548,8 @@ export default function Home() {
                 </summary>
                 <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-2">
                   <p className="text-sm sm:text-base font-medium text-gray-600 leading-relaxed">
-                    This isn't a course - it's a 31-day implementation sprint. While others teach theory, 
-                    you'll build 4 real products worth $31K+. I'm not in Dubai making courses; I'm in 
+                    This isn&apos;t a course - it&apos;s a 31-day implementation sprint. While others teach theory, 
+                    you&apos;ll build 4 real products worth $31K+. I&apos;m not in Dubai making courses; I&apos;m in 
                     Vancouver building daily. You learn by doing, not watching.
                   </p>
                 </div>
@@ -559,7 +558,7 @@ export default function Home() {
               {/* FAQ 4 */}
               <details className="group">
                 <summary className="flex justify-between items-center cursor-pointer bg-gradient-to-b from-gray-50 to-white rounded-lg sm:rounded-xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300">
-                  <h3 className="text-base sm:text-lg font-black text-gray-900 pr-6 sm:pr-8">What if I can't attend live sessions?</h3>
+                  <h3 className="text-base sm:text-lg font-black text-gray-900 pr-6 sm:pr-8">What if I can&apos;t attend live sessions?</h3>
                   <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform duration-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
@@ -585,7 +584,7 @@ export default function Home() {
                   <p className="text-sm sm:text-base font-medium text-gray-600 leading-relaxed">
                     Yes. $799 is the founding price for August only. September cohort pays $1,997, 
                     October pays $2,997. Early adopters get the same content for 60% less because 
-                    they're helping me refine the program.
+                    they&apos;re helping me refine the program.
                   </p>
                 </div>
               </details>
@@ -593,15 +592,15 @@ export default function Home() {
               {/* FAQ 6 */}
               <details className="group">
                 <summary className="flex justify-between items-center cursor-pointer bg-gradient-to-b from-gray-50 to-white rounded-lg sm:rounded-xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300">
-                  <h3 className="text-base sm:text-lg font-black text-gray-900 pr-6 sm:pr-8">What's your refund policy?</h3>
+                  <h3 className="text-base sm:text-lg font-black text-gray-900 pr-6 sm:pr-8">What&apos;s your refund policy?</h3>
                   <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform duration-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
                 <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-2">
                   <p className="text-sm sm:text-base font-medium text-gray-600 leading-relaxed">
-                    Show up, do the work, build the products. If you complete all 4 modules and can't 
-                    use what you built to make money, I'll refund you. But honestly, one landing page 
+                    Show up, do the work, build the products. If you complete all 4 modules and can&apos;t 
+                    use what you built to make money, I&apos;ll refund you. But honestly, one landing page 
                     sale covers 39X your investment.
                   </p>
                 </div>
@@ -624,7 +623,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 text-white">
               Your Gurus Are Still Talking.<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-                I'm Building.
+                I&apos;m Building.
               </span>
             </h2>
             

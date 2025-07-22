@@ -3,7 +3,7 @@ import { stripe } from '@/lib/stripe';
 
 const STRIPE_PRICE_ID = process.env.STRIPE_PRICE_ID!;
 
-export async function POST(request: NextRequest) {
+export async function POST(_request: NextRequest) {
   try {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
