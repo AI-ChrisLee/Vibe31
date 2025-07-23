@@ -3,12 +3,27 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
+import { trackConversion, type VariantType } from '@/lib/analytics';
 
 interface CheckoutButtonProps {
   text: string;
   className?: string;
   size?: "default" | "sm" | "lg" | "icon";
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+}
+
+// Helper to get variant from cookie
+function getVariantFromCookie(): VariantType {
+  if (typeof window === 'undefined') return 'C'
+  
+  const cookies = document.cookie.split(';')
+  for (const cookie of cookies) {
+    const [name, value] = cookie.trim().split('=')
+    if (name === 'hero-variant' && ['A', 'B', 'C'].includes(value)) {
+      return value as VariantType
+    }
+  }
+  return 'C' // Default to original
 }
 
 export function CheckoutButton({ text, className, size = "lg", variant = "default" }: CheckoutButtonProps) {
@@ -18,6 +33,10 @@ export function CheckoutButton({ text, className, size = "lg", variant = "defaul
   const handleCheckout = async () => {
     setLoading(true);
     setError(null);
+    
+    // Track conversion
+    const heroVariant = getVariantFromCookie();
+    trackConversion(heroVariant, 'checkout_button_clicked');
     
     try {
       const response = await fetch('/api/stripe/checkout-session', {

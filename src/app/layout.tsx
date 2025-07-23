@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { CountdownBanner } from '@/components/CountdownBanner'
+import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="font-sans min-h-screen bg-white antialiased">
+        <GoogleAnalytics />
         <CountdownBanner />
         <div className="pt-[40px]">
           {children}

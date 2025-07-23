@@ -1,54 +1,12 @@
 import { CheckoutButton } from "@/components/CheckoutButton"
 import { ScrollToPricingButton } from "@/components/ScrollToPricingButton"
+import { HeroSection } from "@/components/HeroSection"
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 py-12 sm:py-16 md:py-20 lg:py-24">
-        <div className="container">
-          <div className="mx-auto max-w-4xl">
-            {/* Demo Video */}
-            <div className="relative max-w-4xl mx-auto mb-8 md:mb-10">
-              <div className="relative pb-[56.25%] bg-white rounded-lg sm:rounded-xl lg:rounded-2xl overflow-hidden shadow-sm ">
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full"
-                  src="https://www.youtube.com/embed/5JIvYFp4Qvw?start=161"
-                  title="Watch Me Build a $10K Product in 48 Hours"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <h1 className="mb-3 md:mb-4 text-[1.75rem] leading-[1.2] sm:text-3xl sm:leading-[1.15] md:text-4xl md:leading-[1.1] lg:text-5xl lg:leading-[1.1] xl:text-5xl xl:leading-[1.05] font-black tracking-tight text-gray-900">
-                Turn Your Agency Skills Into $31K Products in 31 Days Using Vibe Coding
-              </h1>
-              <p className="mb-6 md:mb-8 text-lg md:text-xl font-medium text-gray-600">
-                Limited August cohort <span className="text-red-600 font-bold">(only 3 spots left)</span>
-              </p>
-              
-              <div>
-                <ScrollToPricingButton 
-                  text="Claim Your Spot Now →" 
-                  className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white text-base sm:text-lg font-bold px-8 sm:px-10 py-3 sm:py-4 rounded-lg shadow-md transition-all hover:shadow-lg animate-pulse-subtle" 
-                />
-                <div className="mt-3 md:mt-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
-                  <p className="text-base font-medium text-gray-600">
-                    🔒 100% Secure Checkout
-                  </p>
-                  <span className="hidden sm:inline text-gray-400">•</span>
-                  <p className="text-base font-medium text-gray-600">
-                    ✓ 30-Day Money Back Guarantee
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Tools Bar */}
       <section className="bg-white py-8 sm:py-10 md:py-12 border-b border-gray-100">
