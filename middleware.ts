@@ -21,15 +21,21 @@ export function middleware(request: NextRequest) {
     
     console.log('[Middleware] Setting new variant:', variant)
     
-    // Set cookie
-    response.cookies.set('hero-variant', variant, {
+    // Set cookie with explicit domain for production
+    const cookieOptions = {
       httpOnly: false,
-      sameSite: 'lax',
-      maxAge: 60 * 60 * 24 * 30 // 30 days
-    })
+      sameSite: 'lax' as const,
+      maxAge: 60 * 60 * 24 * 30, // 30 days
+      path: '/'
+    }
+    
+    response.cookies.set('hero-variant', variant, cookieOptions)
   } else {
     console.log('[Middleware] Existing variant:', variant)
   }
+  
+  // Also set the variant in response headers for debugging
+  response.headers.set('X-Hero-Variant', variant || 'none')
   
   return response
 }
