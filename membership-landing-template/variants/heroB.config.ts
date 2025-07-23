@@ -2,16 +2,16 @@
 // Emphasizes the community, support, and competition aspects
 
 export const heroB = {
-  videoId: "5JIvYFp4Qvw",
-  videoStart: 161,
-  headline: "Join Digital Agency Owners Vibe Building Together & Competing for $1,000 Prize",
-  subheadline: "Weekly live sessions, daily whop support, and a community that ships",
-  urgency: "Only 3 spots left in August cohort",
+  videoId: "YOUR_YOUTUBE_VIDEO_ID",
+  videoStart: 0,
+  headline: "Join [X] [Target Audience] Building Together & Competing for $[Y] Prize",
+  subheadline: "Weekly live sessions, daily community support, and a group that ships",
+  urgency: "Only [X] spots left in [Month] cohort",
   urgencyClass: "text-red-600 font-bold",
   ctaText: "Join the Community Now →",
   trustSignals: [
-    "👥 Live Thursday Sessions",
-    "🏆 $1,000 Graduation Prize"
+    "👥 Live [Day] Sessions",
+    "🏆 $[X] Graduation Prize"
   ],
   // Additional community-focused elements
   communityBadge: {
@@ -19,8 +19,13 @@ export const heroB = {
     className: "bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
   },
   socialProof: {
-    text: "builders shipping together right now",
+    text: "[X] builders shipping together right now",
     className: "text-gray-600 text-sm mt-2"
+  },
+  communityStats: {
+    members: "[X]+ Community Members",
+    messages: "[X]K+ Messages Shared",
+    shipped: "[X] Products Shipped"
   },
   transformationBadge: undefined,
   methodBadge: undefined
