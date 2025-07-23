@@ -1,6 +1,6 @@
 'use server';
 
-import { resend, FROM_EMAIL } from '@/lib/resend';
+import { resend, FROM_EMAIL, REPLY_TO_EMAIL } from '@/lib/resend';
 import { OrderConfirmationEmail, OrderConfirmationEmailText } from '@/lib/email-templates/order-confirmation';
 
 interface SendEmailOptions {
@@ -23,11 +23,12 @@ export async function sendOrderConfirmationEmail({
 }: SendEmailOptions): Promise<{ success: boolean; error?: string }> {
   try {
 
-    // Send email using Resend
+    // Send email using Resend with better deliverability settings
     const { data, error } = await resend.emails.send({
       from: FROM_EMAIL,
       to: email,
-      subject: 'Order Confirmation - Vibe31',
+      replyTo: REPLY_TO_EMAIL,
+      subject: `Welcome to Vibe31! Order #${orderId.slice(0, 8)}`,
       react: OrderConfirmationEmail({
         customerName: name,
         orderAmount: amount,
@@ -37,7 +38,11 @@ export async function sendOrderConfirmationEmail({
         customerName: name,
         orderAmount: amount,
         orderId: orderId
-      })
+      }),
+      headers: {
+        'X-Entity-Ref-ID': orderId,
+        'List-Unsubscribe': `<mailto:unsubscribe@vibe31.com?subject=Unsubscribe>`,
+      }
     });
 
     if (error) {

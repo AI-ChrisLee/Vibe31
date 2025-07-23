@@ -6,4 +6,7 @@ if (!process.env.RESEND_API_KEY) {
 
 export const resend = new Resend(process.env.RESEND_API_KEY);
 
-export const FROM_EMAIL = 'chris@get.vibe31.com';
+// Update this with your verified domain email
+// Format: "Your Name <noreply@yourdomain.com>"
+export const FROM_EMAIL = 'Vibe31 <noreply@vibe31.com>';
+export const REPLY_TO_EMAIL = 'support@vibe31.com';

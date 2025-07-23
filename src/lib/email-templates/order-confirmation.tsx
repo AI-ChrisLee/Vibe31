@@ -88,8 +88,20 @@ export const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
         
         <p style={{ fontSize: '14px', color: '#6b7280' }}>
           Best regards,<br />
-          The Vibe31 Team
+          Chris Lee<br />
+          Founder, Vibe31
         </p>
+        
+        <div style={{ marginTop: '20px', padding: '15px', backgroundColor: '#f3f4f6', borderRadius: '6px' }}>
+          <p style={{ fontSize: '14px', fontWeight: '600', marginBottom: '10px', color: '#000' }}>
+            What happens next?
+          </p>
+          <ul style={{ fontSize: '14px', color: '#6b7280', paddingLeft: '20px', margin: '0' }}>
+            <li>Discord invite coming 3 days before start (Aug 4)</li>
+            <li>First live session: August 7, 2PM PST</li>
+            <li>Check your email for important updates</li>
+          </ul>
+        </div>
       </div>
       
       <div
@@ -97,10 +109,19 @@ export const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
           textAlign: 'center',
           fontSize: '12px',
           color: '#9ca3af',
-          marginTop: '20px',
+          marginTop: '30px',
+          borderTop: '1px solid #e5e7eb',
+          paddingTop: '20px',
         }}
       >
-        <p>© 2025 Vibe31. All rights reserved.</p>
+        <p style={{ margin: '0 0 5px 0' }}>Vibe31 - Transform Your Agency in 31 Days</p>
+        <p style={{ margin: '0 0 5px 0' }}>Vancouver, BC, Canada</p>
+        <p style={{ margin: '0 0 10px 0' }}>© 2025 Vibe31. All rights reserved.</p>
+        <p style={{ margin: '0' }}>
+          <a href="https://vibe31.com" style={{ color: '#6b7280', textDecoration: 'none' }}>vibe31.com</a>
+          {' | '}
+          <a href="mailto:support@vibe31.com" style={{ color: '#6b7280', textDecoration: 'none' }}>support@vibe31.com</a>
+        </p>
       </div>
     </div>
   );
@@ -116,16 +137,27 @@ Order Confirmation
 
 Hi ${customerName},
 
-Thank you for your order! We're excited to confirm that we've received your payment.
+Thank you for joining the Vibe Building Challenge! We're excited to confirm that we've received your payment.
 
 Order Details:
 - Order ID: ${orderId}
 - Amount Paid: $${orderAmount.toFixed(2)}
 
-If you have any questions about your order, please don't hesitate to contact us.
+What happens next?
+- Discord invite coming 3 days before start (Aug 4)
+- First live session: August 7, 2PM PST
+- Check your email for important updates
+
+If you have any questions, please don't hesitate to contact us at support@vibe31.com.
 
 Best regards,
-The Vibe31 Team
+Chris Lee
+Founder, Vibe31
+
+--
+Vibe31 - Transform Your Agency in 31 Days
+Vancouver, BC, Canada
+https://vibe31.com
 
 © 2025 Vibe31. All rights reserved.
   `.trim();
