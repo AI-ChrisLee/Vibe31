@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { CountdownBanner } from '@/components/CountdownBanner'
 import { GoogleAnalytics } from '@/components/GoogleAnalytics'
+import { CookieConsent } from '@/components/CookieConsent'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({
         <div className="pt-[40px]">
           {children}
         </div>
+        <CookieConsent />
       </body>
     </html>
   )

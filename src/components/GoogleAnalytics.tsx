@@ -19,6 +19,20 @@ export function GoogleAnalytics() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+            
+            // Default to denied until consent is given
+            gtag('consent', 'default', {
+              'analytics_storage': 'denied'
+            });
+            
+            // Check for existing consent
+            const consent = localStorage.getItem('cookie-consent');
+            if (consent === 'accepted') {
+              gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+              });
+            }
+            
             gtag('config', '${GA_MEASUREMENT_ID}');
             
             // Debug log
