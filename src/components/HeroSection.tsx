@@ -40,10 +40,11 @@ interface HeroConfig {
   }
 }
 
-// Helper to get variant from cookie
-function getVariantFromCookie(): VariantType {
+// Helper to get or set variant
+function getOrSetVariant(): VariantType {
   if (typeof window === 'undefined') return 'C'
   
+  // Try to get from cookie first
   const cookies = document.cookie.split(';')
   for (const cookie of cookies) {
     const [name, value] = cookie.trim().split('=')
@@ -51,7 +52,16 @@ function getVariantFromCookie(): VariantType {
       return value as VariantType
     }
   }
-  return 'C' // Default to original
+  
+  // If no cookie found, create one on client side
+  const variants: VariantType[] = ['A', 'B', 'C']
+  const newVariant = variants[Math.floor(Math.random() * variants.length)]
+  
+  // Set cookie
+  document.cookie = `hero-variant=${newVariant};path=/;max-age=${60 * 60 * 24 * 30}`
+  console.log('[Client] Set new variant:', newVariant)
+  
+  return newVariant
 }
 
 export function HeroSection() {
@@ -59,7 +69,7 @@ export function HeroSection() {
   const [config, setConfig] = useState<HeroConfig>(heroC as HeroConfig)
   
   useEffect(() => {
-    const detectedVariant = getVariantFromCookie()
+    const detectedVariant = getOrSetVariant()
     console.log('Detected variant:', detectedVariant)
     console.log('All cookies:', document.cookie)
     setVariant(detectedVariant)
