@@ -2,6 +2,16 @@
 
 export type VariantType = 'A' | 'B' | 'C'
 
+// Global gtag function type
+declare global {
+  interface Window {
+    gtag: (
+      command: string,
+      ...args: any[]
+    ) => void
+  }
+}
+
 // GA4 Event names
 export const GA4_EVENTS = {
   // Page view events
@@ -24,9 +34,9 @@ export const GA4_EVENTS = {
 
 // Track page views with variant info
 export function trackPageView(variant: VariantType, path: string = '/') {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
+  if (typeof window !== 'undefined' && window.gtag) {
     // Send enhanced page view with variant info
-    (window as any).gtag('event', GA4_EVENTS.PAGE_VIEW, {
+    window.gtag('event', GA4_EVENTS.PAGE_VIEW, {
       page_path: path,
       hero_variant: variant,
       custom_parameter: {
@@ -36,7 +46,7 @@ export function trackPageView(variant: VariantType, path: string = '/') {
     })
     
     // Also track specific variant view
-    (window as any).gtag('event', GA4_EVENTS.VARIANT_VIEW, {
+    window.gtag('event', GA4_EVENTS.VARIANT_VIEW, {
       variant_id: variant,
       experiment_name: 'hero_ab_test'
     })
@@ -56,9 +66,9 @@ export function trackConversion(variant: VariantType, eventName: string = 'begin
   }
   
   // Google Analytics tracking
-  if (typeof window !== 'undefined' && (window as any).gtag) {
+  if (typeof window !== 'undefined' && window.gtag) {
     // Track the conversion event
-    (window as any).gtag('event', eventName, {
+    window.gtag('event', eventName, {
       hero_variant: variant,
       currency: 'USD',
       value: 799,
@@ -67,7 +77,7 @@ export function trackConversion(variant: VariantType, eventName: string = 'begin
     })
     
     // Also track as variant conversion for A/B test analysis
-    (window as any).gtag('event', GA4_EVENTS.VARIANT_CONVERSION, {
+    window.gtag('event', GA4_EVENTS.VARIANT_CONVERSION, {
       variant_id: variant,
       conversion_type: eventName,
       value: 799
@@ -82,8 +92,8 @@ export function trackConversion(variant: VariantType, eventName: string = 'begin
 
 // Track CTA clicks
 export function trackCTAClick(variant: VariantType, buttonLocation: string) {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', GA4_EVENTS.CTA_CLICK, {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', GA4_EVENTS.CTA_CLICK, {
       hero_variant: variant,
       button_location: buttonLocation,
       button_text: getButtonTextForVariant(variant)
@@ -93,8 +103,8 @@ export function trackCTAClick(variant: VariantType, buttonLocation: string) {
 
 // Track successful purchase (Stripe payment success)
 export function trackPurchase(variant: VariantType, sessionId: string) {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', GA4_EVENTS.PURCHASE, {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', GA4_EVENTS.PURCHASE, {
       transaction_id: sessionId,
       hero_variant: variant,
       currency: 'USD',

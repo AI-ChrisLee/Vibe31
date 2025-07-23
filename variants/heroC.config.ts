@@ -21,5 +21,8 @@ export const heroC = {
   socialProof: {
     text: "Learn the exact method I use to build $10K products in 48 hours",
     className: "text-gray-600 text-sm mt-2"
-  }
+  },
+  transformationBadge: undefined,
+  communityBadge: undefined,
+  communityStats: undefined
 }

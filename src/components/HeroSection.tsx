@@ -1,12 +1,44 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { CheckoutButton } from "@/components/CheckoutButton"
 import { ScrollToPricingButton } from "@/components/ScrollToPricingButton"
 import { heroA } from '../../variants/heroA.config'
 import { heroB } from '../../variants/heroB.config'
 import { heroC } from '../../variants/heroC.config'
 import { trackConversion, trackPageView, trackCTAClick, type VariantType } from '@/lib/analytics'
+
+// Define the config type
+interface HeroConfig {
+  videoId: string
+  videoStart: number
+  headline: string
+  subheadline: string
+  urgency: string
+  urgencyClass: string
+  ctaText: string
+  trustSignals: string[]
+  transformationBadge?: {
+    text: string
+    className: string
+  }
+  communityBadge?: {
+    text: string
+    className: string
+  }
+  methodBadge?: {
+    text: string
+    className: string
+  }
+  socialProof?: {
+    text: string
+    className: string
+  }
+  communityStats?: {
+    members: string
+    messages: string
+    shipped: string
+  }
+}
 
 // Helper to get variant from cookie
 function getVariantFromCookie(): VariantType {
@@ -24,7 +56,7 @@ function getVariantFromCookie(): VariantType {
 
 export function HeroSection() {
   const [variant, setVariant] = useState<VariantType>('C')
-  const [config, setConfig] = useState(heroC)
+  const [config, setConfig] = useState<HeroConfig>(heroC as HeroConfig)
   
   useEffect(() => {
     const detectedVariant = getVariantFromCookie()
@@ -35,13 +67,13 @@ export function HeroSection() {
     // Set config based on variant
     switch (detectedVariant) {
       case 'A':
-        setConfig(heroA)
+        setConfig(heroA as HeroConfig)
         break
       case 'B':
-        setConfig(heroB)
+        setConfig(heroB as HeroConfig)
         break
       default:
-        setConfig(heroC)
+        setConfig(heroC as HeroConfig)
     }
     
     // Track variant view

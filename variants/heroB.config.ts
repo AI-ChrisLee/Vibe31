@@ -22,4 +22,11 @@ export const heroB = {
     text: "builders shipping together right now",
     className: "text-gray-600 text-sm mt-2"
   },
+  communityStats: {
+    members: "247+ Discord Members",
+    messages: "10K+ Messages Shared",
+    shipped: "89 Products Shipped"
+  },
+  transformationBadge: undefined,
+  methodBadge: undefined
 }

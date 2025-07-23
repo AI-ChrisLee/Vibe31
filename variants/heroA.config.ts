@@ -21,5 +21,8 @@ export const heroA = {
   socialProof: {
     text: "Join 47 agency owners who quit client work",
     className: "text-gray-600 text-sm mt-2"
-  }
+  },
+  communityBadge: undefined,
+  methodBadge: undefined,
+  communityStats: undefined
 }
