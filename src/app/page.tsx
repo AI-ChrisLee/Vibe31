@@ -138,19 +138,19 @@ export default function Home() {
                   <svg className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <p className="text-base font-medium text-gray-700">You're tired of trading time for money</p>
+                  <p className="text-base font-medium text-gray-700">You&apos;re tired of trading time for money</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <p className="text-base font-medium text-gray-700">You want to build products but don't know where to start</p>
+                  <p className="text-base font-medium text-gray-700">You want to build products but don&apos;t know where to start</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                  <p className="text-base font-medium text-gray-700">You're NOT looking for get-rich-quick schemes</p>
+                  <p className="text-base font-medium text-gray-700">You&apos;re NOT looking for get-rich-quick schemes</p>
                 </div>
               </div>
             </div>
@@ -166,7 +166,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl sm:text-2xl font-black mb-2 sm:mb-3 text-gray-900">Working Weekends While Friends Party</h3>
                 <p className="text-base font-medium text-gray-600 leading-relaxed">
-                  It's Saturday night. You're debugging client code while course creators make $30K selling templates.
+                  It&apos;s Saturday night. You&apos;re debugging client code while course creators make $30K selling templates.
                 </p>
               </div>
             </div>
@@ -181,7 +181,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl sm:text-2xl font-black mb-2 sm:mb-3 text-gray-900">Copy-Pasting Your Own Code... Again</h3>
                 <p className="text-base font-medium text-gray-600 leading-relaxed">
-                  You could package this as a $2K template, but instead you're ctrl+c ctrl+v for hourly pay.
+                  You could package this as a $2K template, but instead you&apos;re ctrl+c ctrl+v for hourly pay.
                 </p>
               </div>
             </div>
@@ -195,7 +195,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">URGENT</div>
-                <h3 className="text-xl sm:text-2xl font-black mb-2 sm:mb-3 text-gray-900">Can't Afford That Dream Setup</h3>
+                <h3 className="text-xl sm:text-2xl font-black mb-2 sm:mb-3 text-gray-900">Can&apos;t Afford That Dream Setup</h3>
                 <p className="text-base font-medium text-gray-600 leading-relaxed">
                   Still saving for that MacBook Pro while product creators your age drive Teslas.
                 </p>

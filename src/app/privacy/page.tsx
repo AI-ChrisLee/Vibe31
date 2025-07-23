@@ -10,7 +10,7 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-2xl font-black mb-4 text-gray-900">1. Introduction</h2>
               <p className="text-base text-gray-700 leading-relaxed">
-                Vibe 31 ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. 
+                Vibe 31 (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) respects your privacy and is committed to protecting your personal data. 
                 This privacy policy explains how we collect, use, and safeguard your information when you enroll in the 
                 Vibe 31 Challenge.
               </p>
@@ -102,7 +102,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-black mb-4 text-gray-900">9. Children's Privacy</h2>
+              <h2 className="text-2xl font-black mb-4 text-gray-900">9. Children&apos;s Privacy</h2>
               <p className="text-base text-gray-700 leading-relaxed">
                 The Vibe 31 Challenge is not intended for individuals under the age of 18. We do not knowingly 
                 collect personal information from children under 18.
@@ -113,7 +113,7 @@ export default function PrivacyPage() {
               <h2 className="text-2xl font-black mb-4 text-gray-900">10. Changes to This Policy</h2>
               <p className="text-base text-gray-700 leading-relaxed">
                 We may update this privacy policy from time to time. We will notify you of any changes by posting 
-                the new policy on this page and updating the "Last updated" date.
+                the new policy on this page and updating the &quot;Last updated&quot; date.
               </p>
             </section>
 

@@ -10,7 +10,7 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-black mb-4 text-gray-900">1. Acceptance of Terms</h2>
               <p className="text-base text-gray-700 leading-relaxed">
-                By enrolling in the Vibe 31 Challenge ("the Program"), you agree to be bound by these Terms of Service. 
+                By enrolling in the Vibe 31 Challenge (&quot;the Program&quot;), you agree to be bound by these Terms of Service. 
                 If you do not agree to these terms, please do not enroll in the Program.
               </p>
             </section>
@@ -45,7 +45,7 @@ export default function TermsPage() {
                   community, resources, and proprietary materials.
                 </p>
                 <p className="text-base text-gray-700 leading-relaxed">
-                  <strong>Exception:</strong> If you complete ALL of the following requirements and don't achieve results, 
+                  <strong>Exception:</strong> If you complete ALL of the following requirements and don&apos;t achieve results, 
                   you may be eligible for a refund:
                 </p>
                 <ul className="list-disc pl-6 mt-3 space-y-2">
@@ -89,7 +89,7 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-black mb-4 text-gray-900">7. Disclaimer of Warranties</h2>
               <p className="text-base text-gray-700 leading-relaxed">
-                The Program is provided "as is" without any warranties. We do not guarantee specific income results. 
+                The Program is provided &quot;as is&quot; without any warranties. We do not guarantee specific income results. 
                 Your success depends on many factors including your effort, market conditions, and business acumen.
               </p>
             </section>
