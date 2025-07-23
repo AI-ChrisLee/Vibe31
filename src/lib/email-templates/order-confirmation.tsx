@@ -14,115 +14,38 @@ export const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
   return (
     <div
       style={{
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-        lineHeight: '1.6',
-        color: '#333',
-        maxWidth: '600px',
-        margin: '0 auto',
-        padding: '20px',
+        fontFamily: 'Arial, sans-serif',
+        fontSize: '14px',
+        lineHeight: '1.5',
+        color: '#000',
       }}
     >
-      <div
-        style={{
-          backgroundColor: '#f8f9fa',
-          borderRadius: '8px',
-          padding: '40px',
-          marginBottom: '20px',
-        }}
-      >
-        <h1
-          style={{
-            fontSize: '28px',
-            fontWeight: '900',
-            marginBottom: '20px',
-            color: '#000',
-          }}
-        >
-          Order Confirmation
-        </h1>
-        
-        <p style={{ fontSize: '16px', marginBottom: '10px' }}>
-          Hi {customerName},
-        </p>
-        
-        <p style={{ fontSize: '16px', marginBottom: '20px' }}>
-          Thank you for your order! We&apos;re excited to confirm that we&apos;ve received your payment.
-        </p>
-        
-        <div
-          style={{
-            backgroundColor: '#fff',
-            borderRadius: '6px',
-            padding: '20px',
-            marginBottom: '20px',
-            border: '1px solid #e5e7eb',
-          }}
-        >
-          <h2
-            style={{
-              fontSize: '20px',
-              fontWeight: '700',
-              marginBottom: '15px',
-              color: '#000',
-            }}
-          >
-            Order Details
-          </h2>
-          
-          <div style={{ marginBottom: '10px' }}>
-            <span style={{ fontWeight: '500' }}>Order ID:</span>{' '}
-            <span style={{ color: '#6b7280' }}>{orderId}</span>
-          </div>
-          
-          <div style={{ marginBottom: '10px' }}>
-            <span style={{ fontWeight: '500' }}>Amount Paid:</span>{' '}
-            <span style={{ fontSize: '18px', fontWeight: '700', color: '#059669' }}>
-              ${orderAmount.toFixed(2)}
-            </span>
-          </div>
-        </div>
-        
-        <p style={{ fontSize: '14px', color: '#6b7280', marginBottom: '10px' }}>
-          If you have any questions about your order, please don&apos;t hesitate to contact us.
-        </p>
-        
-        <p style={{ fontSize: '14px', color: '#6b7280' }}>
-          Best regards,<br />
-          Chris Lee<br />
-          Founder, Vibe31
-        </p>
-        
-        <div style={{ marginTop: '20px', padding: '15px', backgroundColor: '#f3f4f6', borderRadius: '6px' }}>
-          <p style={{ fontSize: '14px', fontWeight: '600', marginBottom: '10px', color: '#000' }}>
-            What happens next?
-          </p>
-          <ul style={{ fontSize: '14px', color: '#6b7280', paddingLeft: '20px', margin: '0' }}>
-            <li>Discord invite coming 3 days before start (Aug 4)</li>
-            <li>First live session: August 7, 2PM PST</li>
-            <li>Check your email for important updates</li>
-          </ul>
-        </div>
-      </div>
+      <p>Hey {customerName},</p>
       
-      <div
-        style={{
-          textAlign: 'center',
-          fontSize: '12px',
-          color: '#9ca3af',
-          marginTop: '30px',
-          borderTop: '1px solid #e5e7eb',
-          paddingTop: '20px',
-        }}
-      >
-        <p style={{ margin: '0 0 5px 0' }}>Vibe31 - Transform Your Agency in 31 Days</p>
-        <p style={{ margin: '0 0 5px 0' }}>Vancouver, BC, Canada</p>
-        <p style={{ margin: '0 0 10px 0' }}>© 2025 Vibe31. All rights reserved.</p>
-        <p style={{ margin: '0' }}>
-          <a href="https://vibe31.com" style={{ color: '#6b7280', textDecoration: 'none' }}>vibe31.com</a>
-          {' | '}
-          <a href="mailto:support@vibe31.com" style={{ color: '#6b7280', textDecoration: 'none' }}>support@vibe31.com</a>
-        </p>
-      </div>
+      <p>Just wanted to let you know we got your payment for Vibe31! Super excited to have you join us.</p>
+      
+      <p>Here&apos;s your order info:<br />
+      Order ID: {orderId}<br />
+      Amount: ${orderAmount.toFixed(2)}</p>
+      
+      <p>What&apos;s next:</p>
+      <p>• I&apos;ll send you the Discord invite on Aug 4 (3 days before we start)<br />
+      • Our first live session is Aug 7 at 2PM PST<br />
+      • Keep an eye on your email - I&apos;ll be sending updates</p>
+      
+      <p>If you have any questions, just reply to this email.</p>
+      
+      <p>Looking forward to working with you!</p>
+      
+      <p>Chris<br />
+      Founder, Vibe31</p>
+      
+      <p style={{ fontSize: '12px', color: '#666', marginTop: '40px' }}>
+        --<br />
+        Vibe31 - Transform Your Agency in 31 Days<br />
+        Vancouver, BC, Canada<br />
+        <a href="https://vibe31.com" style={{ color: '#666' }}>vibe31.com</a>
+      </p>
     </div>
   );
 };
@@ -132,33 +55,28 @@ export const OrderConfirmationEmailText = ({
   orderAmount,
   orderId,
 }: OrderConfirmationEmailProps) => {
-  return `
-Order Confirmation
+  return `Hey ${customerName},
 
-Hi ${customerName},
+Just wanted to let you know we got your payment for Vibe31! Super excited to have you join us.
 
-Thank you for joining the Vibe Building Challenge! We're excited to confirm that we've received your payment.
+Here's your order info:
+Order ID: ${orderId}
+Amount: $${orderAmount.toFixed(2)}
 
-Order Details:
-- Order ID: ${orderId}
-- Amount Paid: $${orderAmount.toFixed(2)}
+What's next:
+• I'll send you the Discord invite on Aug 4 (3 days before we start)
+• Our first live session is Aug 7 at 2PM PST
+• Keep an eye on your email - I'll be sending updates
 
-What happens next?
-- Discord invite coming 3 days before start (Aug 4)
-- First live session: August 7, 2PM PST
-- Check your email for important updates
+If you have any questions, just reply to this email.
 
-If you have any questions, please don't hesitate to contact us at support@vibe31.com.
+Looking forward to working with you!
 
-Best regards,
-Chris Lee
+Chris
 Founder, Vibe31
 
 --
 Vibe31 - Transform Your Agency in 31 Days
 Vancouver, BC, Canada
-https://vibe31.com
-
-© 2025 Vibe31. All rights reserved.
-  `.trim();
+vibe31.com`;
 };

@@ -25,8 +25,13 @@ export async function POST(_request: NextRequest) {
       mode: 'payment',
       success_url: `${process.env.NEXT_PUBLIC_APP_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}`,
-      // Stripe will collect email during checkout
-      customer_email: undefined,
+      // Collect customer name and email
+      billing_address_collection: 'required',
+      shipping_address_collection: {
+        allowed_countries: ['US', 'CA'],
+      },
+      // Allow discount codes
+      allow_promotion_codes: true,
     });
 
     return NextResponse.json({ url: session.url });

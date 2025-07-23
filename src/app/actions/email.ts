@@ -28,7 +28,7 @@ export async function sendOrderConfirmationEmail({
       from: FROM_EMAIL,
       to: email,
       replyTo: REPLY_TO_EMAIL,
-      subject: `Welcome to Vibe31! Order #${orderId.slice(0, 8)}`,
+      subject: `Got your payment! Welcome to Vibe31 🎉`,
       react: OrderConfirmationEmail({
         customerName: name,
         orderAmount: amount,
@@ -41,8 +41,24 @@ export async function sendOrderConfirmationEmail({
       }),
       headers: {
         'X-Entity-Ref-ID': orderId,
-        'List-Unsubscribe': `<mailto:unsubscribe@vibe31.com?subject=Unsubscribe>`,
-      }
+        'X-Priority': '1',
+        'X-MSMail-Priority': 'High',
+        'Importance': 'high',
+        'List-Unsubscribe': `<mailto:support@vibe31.com?subject=Unsubscribe>`,
+        'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
+        'Precedence': 'bulk',
+        'X-Mailer': 'Vibe31 Notification System',
+      },
+      tags: [
+        {
+          name: 'category',
+          value: 'order_confirmation'
+        },
+        {
+          name: 'order_id',
+          value: orderId
+        }
+      ]
     });
 
     if (error) {

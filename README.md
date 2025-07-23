@@ -1,110 +1,81 @@
-# Next.js Bootcamp Starter Template
+# Vibe31 Landing Page
 
-A complete starter template for bootcamp students with Next.js, Supabase, shadcn/ui, and more.
+Transform Your Agency in 31 Days - A comprehensive challenge to build and scale your digital agency.
 
-## Quick Start
+## Features
 
-1. **Clone and Install**
-   ```bash
-   npm install
-   ```
+- **Stripe Payment Integration**: Secure checkout with discount code support
+- **Email Automation**: Order confirmation emails via Resend
+- **Database**: Customer management with Supabase
+- **Responsive Design**: Mobile-optimized with Tailwind CSS
+- **Countdown Timer**: Live countdown to launch date
+- **Smooth Animations**: Scroll animations and micro-interactions
 
-2. **Set up environment variables**
-   ```bash
-   cp .env.local.example .env.local
-   ```
-   Then edit `.env.local` with your actual values.
+## Tech Stack
 
-3. **Initialize shadcn/ui**
-   ```bash
-   npx shadcn-ui@latest init -y
-   ```
+- Next.js 15 (App Router)
+- TypeScript
+- Tailwind CSS + shadcn/ui
+- Stripe (Payment Processing)
+- Supabase (Database)
+- Resend (Email Service)
+- Vercel (Deployment)
 
-4. **Run the development server**
-   ```bash
-   npm run dev
-   ```
+## Getting Started
 
-## What's Included
-
-### Core Technologies
-- **Next.js 15** - React framework with App Router
-- **TypeScript** - Type safety and better DX
-- **Tailwind CSS** - Utility-first CSS framework
-- **shadcn/ui** - High-quality React components
-
-### Pre-configured Services
-- **Supabase** - Database, Auth, and Storage
-- **Stripe** - Payment processing
-- **Resend** - Email service
-- **Vercel** - Deployment platform
-
-### Development Tools
-- ESLint & Prettier configured
-- TypeScript strict mode
-- Git-ready with .gitignore
-
-## Project Structure
-
-```
-├── src/
-│   ├── app/              # Next.js App Router
-│   │   ├── layout.tsx    # Root layout
-│   │   ├── page.tsx      # Home page
-│   │   └── globals.css   # Global styles
-│   ├── components/       # React components
-│   │   └── ui/          # shadcn/ui components
-│   └── lib/             # Utility functions
-│       └── utils.ts     # cn() helper
-├── public/              # Static assets
-├── .env.local.example   # Environment template
-├── components.json      # shadcn/ui config
-├── tailwind.config.ts   # Tailwind config
-└── package.json         # Dependencies
-```
-
-## Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run format` - Format code with Prettier
-- `npm run typecheck` - Check TypeScript types
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Copy environment variables: `cp .env.local.example .env.local`
+4. Update `.env.local` with your API keys
+5. Run development server: `npm run dev`
 
 ## Environment Variables
 
-Copy `.env.local.example` to `.env.local` and fill in your values:
+```env
+# Supabase
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
 
-### Supabase
-- Get from: https://supabase.com/dashboard/project/_/settings/api
+# Stripe
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+STRIPE_PRICE_ID=
 
-### Stripe
-- Get from: https://dashboard.stripe.com/apikeys
+# Resend
+RESEND_API_KEY=
 
-### Resend
-- Get from: https://resend.com/api-keys
+# App
+NEXT_PUBLIC_APP_URL=https://yourdomain.com
+```
 
-## Adding Components
+## Stripe Webhook Setup
 
-Use shadcn/ui CLI to add components:
+1. Add webhook endpoint in Stripe Dashboard: `https://yourdomain.com/api/stripe/webhook`
+2. Select event: `checkout.session.completed`
+3. Copy webhook secret to `STRIPE_WEBHOOK_SECRET`
+
+## Local Development
 
 ```bash
-npx shadcn-ui@latest add button
-npx shadcn-ui@latest add card
-npx shadcn-ui@latest add form
+# Start dev server
+npm run dev
+
+# Test Stripe webhooks locally
+stripe listen --forward-to localhost:3000/api/stripe/webhook
 ```
 
 ## Deployment
 
-1. Push to GitHub
-2. Import to Vercel
-3. Add environment variables
-4. Deploy
+Deploy to Vercel:
 
-## Resources
+```bash
+vercel
+```
 
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Supabase Documentation](https://supabase.com/docs)
-- [shadcn/ui Documentation](https://ui.shadcn.com)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+Remember to add all environment variables in Vercel dashboard.
+
+## License
+
+© 2025 Vibe31. All rights reserved.
