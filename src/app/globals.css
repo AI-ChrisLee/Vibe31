@@ -70,6 +70,9 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 16px !important;
   }
   
   /* Typography with custom font weights per CLAUDE.md */
@@ -93,12 +96,14 @@
   }
   
   p {
-    @apply text-sm sm:text-base md:text-lg font-medium leading-relaxed text-gray-700;
+    @apply text-base md:text-lg font-medium leading-relaxed text-gray-700;
   }
   
   /* Container with responsive padding */
   .container {
-    @apply mx-auto px-3 max-w-7xl;
+    @apply mx-auto max-w-7xl;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
   
   /* Content max-widths for optimal reading */
@@ -135,6 +140,36 @@
   /* Enhanced button hover states */
   .btn-hover-lift {
     @apply transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:shadow-md;
+  }
+  
+  /* Subtle pulse animation for CTAs */
+  @keyframes pulse-subtle {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.02);
+      opacity: 0.9;
+    }
+  }
+  
+  .animate-pulse-subtle {
+    animation: pulse-subtle 3s ease-in-out infinite;
+  }
+  
+  /* Pulse border animation for urgent items */
+  @keyframes pulse-border {
+    0%, 100% {
+      border-color: rgb(254 202 202);
+    }
+    50% {
+      border-color: rgb(252 165 165);
+    }
+  }
+  
+  .animate-pulse-border {
+    animation: pulse-border 2s ease-in-out infinite;
   }
   
   /* Icon hover effects */
