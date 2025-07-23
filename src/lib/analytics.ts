@@ -7,7 +7,8 @@ declare global {
   interface Window {
     gtag: (
       command: string,
-      ...args: any[]
+      eventNameOrConfig: string | Record<string, unknown>,
+      parameters?: Record<string, unknown>
     ) => void
   }
 }
