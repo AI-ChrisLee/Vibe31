@@ -5,6 +5,15 @@ const STRIPE_PRICE_ID = process.env.STRIPE_PRICE_ID!;
 
 export async function POST(_request: NextRequest) {
   try {
+    // Check if required environment variables are set
+    if (!STRIPE_PRICE_ID) {
+      throw new Error('STRIPE_PRICE_ID is not configured');
+    }
+    
+    if (!process.env.NEXT_PUBLIC_APP_URL) {
+      throw new Error('NEXT_PUBLIC_APP_URL is not configured');
+    }
+
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
@@ -23,8 +32,12 @@ export async function POST(_request: NextRequest) {
     return NextResponse.json({ url: session.url });
   } catch (error) {
     console.error('Error creating checkout session:', error);
+    
+    // More detailed error message for debugging
+    const errorMessage = error instanceof Error ? error.message : 'Failed to create checkout session';
+    
     return NextResponse.json(
-      { error: 'Failed to create checkout session' },
+      { error: errorMessage },
       { status: 500 }
     );
   }
