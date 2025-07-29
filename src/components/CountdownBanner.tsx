@@ -44,30 +44,30 @@ export function CountdownBanner() {
   }
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-red-600 to-red-700 border-b border-red-800">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
       <div className="container">
         <div className="flex items-center justify-center gap-3 sm:gap-6 py-2 px-4">
           {/* Date */}
-          <span className="text-red-100 text-xs sm:text-sm font-medium">
+          <span className="text-gray-600 text-xs sm:text-sm font-medium">
             August 7, 2PM PST
           </span>
           
           {/* Countdown */}
-          <div className="flex items-center text-white font-mono">
-            <span className="text-sm sm:text-base md:text-lg font-bold">{String(timeLeft.days).padStart(2, '0')}</span>
-            <span className="text-red-300 mx-0.5 sm:mx-1">:</span>
-            <span className="text-sm sm:text-base md:text-lg font-bold">{String(timeLeft.hours).padStart(2, '0')}</span>
-            <span className="text-red-300 mx-0.5 sm:mx-1">:</span>
-            <span className="text-sm sm:text-base md:text-lg font-bold">{String(timeLeft.minutes).padStart(2, '0')}</span>
-            <span className="text-red-300 mx-0.5 sm:mx-1">:</span>
-            <span className="text-sm sm:text-base md:text-lg font-bold">{String(timeLeft.seconds).padStart(2, '0')}</span>
+          <div className="flex items-center text-gray-900 font-mono">
+            <span className="text-sm sm:text-base md:text-lg font-semibold">{String(timeLeft.days).padStart(2, '0')}</span>
+            <span className="text-gray-400 mx-0.5 sm:mx-1">:</span>
+            <span className="text-sm sm:text-base md:text-lg font-semibold">{String(timeLeft.hours).padStart(2, '0')}</span>
+            <span className="text-gray-400 mx-0.5 sm:mx-1">:</span>
+            <span className="text-sm sm:text-base md:text-lg font-semibold">{String(timeLeft.minutes).padStart(2, '0')}</span>
+            <span className="text-gray-400 mx-0.5 sm:mx-1">:</span>
+            <span className="text-sm sm:text-base md:text-lg font-semibold">{String(timeLeft.seconds).padStart(2, '0')}</span>
           </div>
           
           {/* CTA */}
           <ScrollToPricingButton 
             text="Join" 
             size="sm"
-            className="bg-white hover:bg-red-50 text-red-700 font-bold px-3 sm:px-4 py-1 text-xs sm:text-sm rounded transition-colors shadow-sm" 
+            className="bg-gray-900 hover:bg-gray-800 text-white font-medium px-3 sm:px-4 py-1 text-xs sm:text-sm rounded-md transition-colors shadow-sm" 
           />
         </div>
       </div>

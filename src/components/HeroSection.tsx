@@ -1,11 +1,7 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { ScrollToPricingButton } from "@/components/ScrollToPricingButton"
 import { heroA } from '../../variants/heroA.config'
-import { heroB } from '../../variants/heroB.config'
-import { heroC } from '../../variants/heroC.config'
-import { trackConversion, trackPageView, trackCTAClick, type VariantType } from '@/lib/analytics'
 
 // Define the config type
 interface HeroConfig {
@@ -40,55 +36,9 @@ interface HeroConfig {
   }
 }
 
-// Helper to get or set variant
-function getOrSetVariant(): VariantType {
-  if (typeof window === 'undefined') return 'C'
-  
-  // Try to get from cookie first
-  const cookies = document.cookie.split(';')
-  for (const cookie of cookies) {
-    const [name, value] = cookie.trim().split('=')
-    if (name === 'hero-variant' && ['A', 'B', 'C'].includes(value)) {
-      return value as VariantType
-    }
-  }
-  
-  // If no cookie found, create one on client side
-  const variants: VariantType[] = ['A', 'B', 'C']
-  const newVariant = variants[Math.floor(Math.random() * variants.length)]
-  
-  // Set cookie
-  document.cookie = `hero-variant=${newVariant};path=/;max-age=${60 * 60 * 24 * 30}`
-  console.log('[Client] Set new variant:', newVariant)
-  
-  return newVariant
-}
 
 export function HeroSection() {
-  const [variant, setVariant] = useState<VariantType>('C')
-  const [config, setConfig] = useState<HeroConfig>(heroC as HeroConfig)
-  
-  useEffect(() => {
-    const detectedVariant = getOrSetVariant()
-    console.log('Detected variant:', detectedVariant)
-    console.log('All cookies:', document.cookie)
-    setVariant(detectedVariant)
-    
-    // Set config based on variant
-    switch (detectedVariant) {
-      case 'A':
-        setConfig(heroA as HeroConfig)
-        break
-      case 'B':
-        setConfig(heroB as HeroConfig)
-        break
-      default:
-        setConfig(heroC as HeroConfig)
-    }
-    
-    // Track variant view
-    trackPageView(detectedVariant)
-  }, [])
+  const config = heroA as HeroConfig
   
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 py-12 sm:py-16 md:py-20 lg:py-24">
@@ -132,11 +82,17 @@ export function HeroSection() {
           </div>
           
           <div className="text-center">
-            <h1 className="mb-3 md:mb-4 text-[1.75rem] leading-[1.2] sm:text-3xl sm:leading-[1.15] md:text-4xl md:leading-[1.1] lg:text-5xl lg:leading-[1.1] xl:text-5xl xl:leading-[1.05] font-black tracking-tight text-gray-900">
-              {config.headline}
-            </h1>
+            <h1 className="mb-3 md:mb-4 text-[2rem] leading-[1.2] sm:text-4xl sm:leading-[1.15] md:text-5xl md:leading-[1.1] lg:text-6xl lg:leading-[1.1] xl:text-7xl xl:leading-[1.05] font-black tracking-tight text-gray-900" dangerouslySetInnerHTML={{ __html: config.headline }} />
             <p className="mb-6 md:mb-8 text-lg md:text-xl font-medium text-gray-600">
-              {config.subheadline} <span className={config.urgencyClass}>({config.urgency})</span>
+              {config.subheadline}
+            </p>
+            <p className={`${config.urgencyClass} mb-6`}>
+              {config.urgency.split('\n').map((line, index) => (
+                <span key={index}>
+                  {line}
+                  {index === 0 && <br />}
+                </span>
+              ))}
             </p>
             
             {/* Community stats for variant B */}
@@ -160,11 +116,7 @@ export function HeroSection() {
             <div>
               <ScrollToPricingButton 
                 text={config.ctaText}
-                className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white text-base sm:text-lg font-bold px-8 sm:px-10 py-3 sm:py-4 rounded-lg shadow-md transition-all hover:shadow-lg animate-pulse-subtle"
-                onClick={() => {
-                  trackCTAClick(variant, 'hero_section')
-                  trackConversion(variant, 'hero_cta_clicked')
-                }}
+                className="w-full sm:w-auto bg-gray-900 hover:bg-gray-800 text-white text-base sm:text-lg font-medium px-8 sm:px-10 py-3 sm:py-4 rounded-md shadow-sm transition-all hover:shadow-md"
               />
               
               {/* Social proof for variants A and B */}

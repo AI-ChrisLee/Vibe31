@@ -1,27 +1,17 @@
-// Hero Variant A: Transformation-focused
-// Emphasizes the personal transformation from agency to product empire
+// Hero Variant A: Direct Value Proposition
+// Emphasizes the core promise of cloning viral AI apps quickly
 
 export const heroA = {
   videoId: "5JIvYFp4Qvw",
   videoStart: 161,
-  headline: "From Burned Out Agency Owner to $31K Product Portfolio in 31 Days",
-  subheadline: "The proven system that helped 47 agencies escape the time-for-money trap",
-  urgency: "Transformation starts August 7th",
-  urgencyClass: "text-green-600 font-bold",
-  ctaText: "Start Your Transformation →",
-  trustSignals: [
-    "🚀 47 Agencies Transformed",
-    "💰 Average: $31K Portfolio in 31 Days"
-  ],
-  // Additional transformation-focused elements
-  transformationBadge: {
-    text: "PROVEN TRANSFORMATION",
-    className: "bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
-  },
-  socialProof: {
-    text: "Join 47 agency owners who quit client work",
-    className: "text-gray-600 text-sm mt-2"
-  },
+  headline: "I'll Show You How to Clone <span class='bg-yellow-200 px-1'>$50K AI Apps</span> in 48 Hours",
+  subheadline: "Join the 31-day challenge where you'll build 3 proven AI apps.",
+  urgency: "Only 30 founding members.",
+  urgencyClass: "text-gray-600 font-medium",
+  ctaText: "Claim Your Spot →",
+  trustSignals: [],
+  // Additional direct value elements
+  transformationBadge: undefined,
   communityBadge: undefined,
   methodBadge: undefined,
   communityStats: undefined
