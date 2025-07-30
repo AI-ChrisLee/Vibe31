@@ -4,7 +4,7 @@ import { useState } from "react"
 import { joinWaitlist } from "@/app/actions/waitlist"
 
 export function SimpleWaitlistForm() {
-  const [step, setStep] = useState<"initial" | "email" | "details" | "success">("initial")
+  const [step, setStep] = useState<"email" | "details" | "success">("email")
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
   const [consent, setConsent] = useState(false)
@@ -39,17 +39,6 @@ export function SimpleWaitlistForm() {
     } finally {
       setIsSubmitting(false)
     }
-  }
-
-  if (step === "initial") {
-    return (
-      <button
-        onClick={() => setStep("email")}
-        className="px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-lg transition-colors text-lg"
-      >
-        Get the Playbook
-      </button>
-    )
   }
 
   if (step === "email") {

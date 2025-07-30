@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { SimpleWaitlistForm } from "@/components/SimpleWaitlistForm"
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef } from "react"
 
 export default function WaitlistPage() {
   const [hasClickedVideo, setHasClickedVideo] = useState(false)
@@ -15,16 +15,6 @@ export default function WaitlistPage() {
       ctaRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
     }, 100)
   }
-
-  useEffect(() => {
-    if (hasClickedVideo && ctaRef.current) {
-      // Trigger the form to show email step
-      const button = ctaRef.current.querySelector('button')
-      if (button) {
-        button.click()
-      }
-    }
-  }, [hasClickedVideo])
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
