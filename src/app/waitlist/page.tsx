@@ -59,13 +59,13 @@ export default function WaitlistPage() {
           
           {/* Content */}
           <h1 className="text-4xl font-black text-gray-900 mb-6 leading-tight">
-            📬 Get my 31 hour<br />
+            Get my Vibe 31<br />
             <span className="bg-yellow-300 px-2">Micro SaaS playbook</span><br />
             every Saturday.
           </h1>
           
           <p className="text-lg text-gray-700 mb-8 leading-relaxed max-w-xl mx-auto">
-            I build micro SaaS products in 31 hours using <span className="font-bold">Cursor + Claude + coffee.</span> No BS methodology, just results.
+            I build profitable micro SaaS in 31 hours. <span className="font-bold">Cursor + Claude + coffee.</span> No sprints, just shipping.
           </p>
           
           <div className="max-w-md mx-auto" ref={ctaRef}>
