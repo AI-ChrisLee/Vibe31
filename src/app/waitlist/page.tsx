@@ -28,12 +28,12 @@ export default function WaitlistPage() {
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
-      <div className="max-w-2xl w-full">
+      <div className="max-w-3xl w-full">
         <div className="text-center">
           {/* Hero GIF Section */}
           <div className="mb-8">
             <div 
-              className="relative w-[80vw] md:w-[40vw] max-w-xl mx-auto rounded-lg overflow-hidden shadow-lg cursor-pointer group"
+              className="relative w-[90vw] max-w-md mx-auto rounded-lg overflow-hidden shadow-lg cursor-pointer group"
               onClick={handleVideoClick}
             >
               <Image
@@ -46,27 +46,26 @@ export default function WaitlistPage() {
                 unoptimized
               />
               {!hasClickedVideo && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg mb-4">
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-40 transition-all">
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
                     <svg className="w-8 h-8 text-gray-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z"/>
                     </svg>
                   </div>
-                  <p className="text-white font-semibold text-lg px-4 text-center">
-                    🎁 Unlock the Ready-to-Use Playbook
-                  </p>
                 </div>
               )}
             </div>
           </div>
           
           {/* Content */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
-            Unlock the <span className="bg-yellow-300 px-2">31-Hour</span> Playbook
+          <h1 className="text-4xl font-black text-gray-900 mb-6 leading-tight">
+            📬 Get my 31 hour<br />
+            <span className="bg-yellow-300 px-2">Micro SaaS playbook</span><br />
+            every Saturday.
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed max-w-xl mx-auto">
-            I build micro SaaS products in 31 hours using Cursor + Claude + coffee. No BS methodology, just results.
+          <p className="text-lg text-gray-700 mb-8 leading-relaxed max-w-xl mx-auto">
+            I build micro SaaS products in 31 hours using <span className="font-bold">Cursor + Claude + coffee.</span> No BS methodology, just results.
           </p>
           
           <div className="max-w-md mx-auto" ref={ctaRef}>
