@@ -60,7 +60,7 @@ export default function WaitlistPage() {
           </div>
           
           {/* Content */}
-          <h1 className="text-4xl md:text-5xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight" style={{ maxFontSize: '48px' }}>
+          <h1 className="text-4xl md:text-5xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight">
             Get my<br />
             <span className="relative">
               <span className="absolute inset-x-0 bottom-0 h-[0.6em] bg-yellow-300"></span>
