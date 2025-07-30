@@ -1,25 +1,22 @@
-// Hero Variant B: Community-focused
-// Emphasizes the community, support, and competition aspects
+// Hero Variant B: Revenue-focused
+// Emphasizes the money-making potential and specific apps
 
 export const heroB = {
   videoId: "5JIvYFp4Qvw",
   videoStart: 161,
-  headline: "Join Digital Agency Owners Vibe Building Together & Competing for $1,000 Prize",
-  subheadline: "Weekly live sessions, daily whop support, and a community that ships",
-  urgency: "Only 3 spots left in August cohort",
+  headline: "I'll Show You How to Clone $50K AI Apps in 48 Hours",
+  subheadline: "Build 3 viral AI apps: Landing Page Builder, Shorts Generator, ChatGPT Wrapper.",
+  urgency: "Only 30 founding members.\nAugust 7 - September 4, 2025",
   urgencyClass: "text-red-600 font-bold",
-  ctaText: "Join the Community Now →",
-  trustSignals: [
-    "👥 Live Thursday Sessions",
-    "🏆 $1,000 Graduation Prize"
-  ],
-  // Additional community-focused elements
+  ctaText: "Secure Your Spot →",
+  trustSignals: [],
+  // Additional revenue-focused elements
   communityBadge: {
-    text: "ACTIVE COMMUNITY",
-    className: "bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
+    text: "$50K APP BLUEPRINTS",
+    className: "bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
   },
   socialProof: {
-    text: "builders shipping together right now",
+    text: "Clone proven winners instead of building from scratch",
     className: "text-gray-600 text-sm mt-2"
   },
   transformationBadge: undefined,

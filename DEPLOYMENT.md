@@ -20,7 +20,7 @@ STRIPE_PRICE_ID=price_... (your product price ID)
 
 ### App Configuration
 ```
-NEXT_PUBLIC_APP_URL=https://your-domain.vercel.app
+NEXT_PUBLIC_APP_URL=https://vibe31.com
 ```
 
 ### Supabase Configuration

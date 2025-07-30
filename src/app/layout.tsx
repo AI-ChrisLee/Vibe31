@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { CountdownBanner } from '@/components/CountdownBanner'
+// import { CountdownBanner } from '@/components/CountdownBanner'
 import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 import { CookieConsent } from '@/components/CookieConsent'
 

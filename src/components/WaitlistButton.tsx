@@ -10,7 +10,7 @@ interface WaitlistButtonProps {
   size?: 'sm' | 'md' | 'lg'
 }
 
-export function WaitlistButton({ text, className, size = 'md' }: WaitlistButtonProps) {
+export function WaitlistButton({ text, className }: WaitlistButtonProps) {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (

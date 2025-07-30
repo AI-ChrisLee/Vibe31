@@ -23,7 +23,7 @@ export function WaitlistForm() {
       } else {
         setError(result.error || "Something went wrong. Please try again.")
       }
-    } catch (err) {
+    } catch {
       setError("Something went wrong. Please try again.")
     } finally {
       setIsSubmitting(false)
@@ -48,10 +48,10 @@ export function WaitlistForm() {
             />
           </svg>
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
-            You're on the list!
+            You&apos;re on the list!
           </h3>
           <p className="text-gray-600">
-            We'll notify you as soon as we launch. Check your email for confirmation.
+            We&apos;ll notify you as soon as we launch. Check your email for confirmation.
           </p>
         </div>
       </div>

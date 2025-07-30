@@ -618,7 +618,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 mb-4 sm:mb-6">
               <span className="h-px w-8 sm:w-12 bg-gray-400"></span>
-              <p className="text-sm font-medium text-gray-300 uppercase tracking-wider">Don't Miss Out</p>
+              <p className="text-sm font-medium text-gray-300 uppercase tracking-wider">Don&apos;t Miss Out</p>
               <span className="h-px w-8 sm:w-12 bg-gray-400"></span>
             </div>
             

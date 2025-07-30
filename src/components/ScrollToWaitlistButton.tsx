@@ -8,7 +8,7 @@ interface ScrollToWaitlistButtonProps {
   size?: 'sm' | 'md' | 'lg'
 }
 
-export function ScrollToWaitlistButton({ text, className, size = 'md' }: ScrollToWaitlistButtonProps) {
+export function ScrollToWaitlistButton({ text, className }: ScrollToWaitlistButtonProps) {
   const scrollToWaitlist = () => {
     window.scrollTo({
       top: 0,
