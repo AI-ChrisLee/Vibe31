@@ -25,8 +25,8 @@ export default function WaitlistPage() {
             <Image
               src="/logo.svg"
               alt="Vibe 31"
-              width={120}
-              height={29}
+              width={80}
+              height={19}
               className="mx-auto"
               priority
             />
@@ -60,8 +60,8 @@ export default function WaitlistPage() {
           </div>
           
           {/* Content */}
-          <h1 className="text-4xl font-black text-gray-900 mb-6 leading-tight">
-            Get my Vibe 31<br />
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
+            Get my<br />
             <span className="bg-yellow-300 px-2">Micro SaaS playbook</span><br />
             every Saturday.
           </h1>
