@@ -20,6 +20,18 @@ export default function WaitlistPage() {
     <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
       <div className="max-w-3xl w-full">
         <div className="text-center">
+          {/* Logo */}
+          <div className="mb-6">
+            <Image
+              src="/logo.svg"
+              alt="Vibe 31"
+              width={120}
+              height={29}
+              className="mx-auto"
+              priority
+            />
+          </div>
+          
           {/* Hero GIF Section */}
           <div className="mb-8">
             <div 

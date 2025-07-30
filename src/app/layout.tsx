@@ -12,13 +12,30 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Vibe31 - Join the Waitlist | Build 3 AI Apps in 1 Month',
-  description: 'Master AI tools that replace $300K developers. Build viral apps in 48 hours. Limited to 30 founding members.',
-  keywords: ['AI development', 'AI apps', 'no-code AI', 'AI tools', 'build AI apps', 'Cursor AI', 'Claude AI'],
+  title: 'Vibe 31 - Build Profitable Micro SaaS in 31 Hours',
+  description: 'Learn to build profitable micro SaaS products in just 31 hours. Get the playbook, tools, and strategies used by successful indie hackers.',
+  keywords: ['micro saas', 'indie hacker', 'build saas', 'cursor ai', 'claude ai', 'ship fast', 'saas playbook'],
+  metadataBase: new URL('https://vibe31.com'),
   openGraph: {
-    title: 'Vibe31 - Join the Waitlist | Build 3 AI Apps in 1 Month',
-    description: 'Master AI tools that replace $300K developers. Build viral apps in 48 hours. Limited to 30 founding members.',
+    title: 'Vibe 31 - Build Profitable Micro SaaS in 31 Hours',
+    description: 'Learn to build profitable micro SaaS products in just 31 hours. Get the playbook, tools, and strategies.',
     type: 'website',
+    siteName: 'Vibe 31',
+    images: [
+      {
+        url: '/hero-image.gif',
+        width: 500,
+        height: 333,
+        alt: 'Building micro SaaS in 31 hours',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    creator: '@aichrislee',
+  },
+  icons: {
+    icon: '/favicon.svg',
   },
 }
 
