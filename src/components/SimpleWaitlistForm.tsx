@@ -49,7 +49,7 @@ export function SimpleWaitlistForm() {
           Check your inbox to confirm your email.
         </p>
         <p className="text-sm text-gray-600">
-          First issue drops this Saturday: &quot;How I Built ProfilePicAI to $3K MRR in 72 Hours&quot;
+          First issue drops this Saturday: &quot;How I Built ProfilePicAI to $3K MRR in 31 Hours&quot;
         </p>
       </div>
     )

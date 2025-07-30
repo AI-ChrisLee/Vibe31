@@ -49,14 +49,12 @@ export default function WaitlistPage() {
           
           {/* Content */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
-            Ship Your First<br />
-            <span className="bg-yellow-300 px-2">Micro SaaS</span><br />
-            in 48 Hours
+            I build <span className="bg-yellow-300 px-2">micro SaaS</span> products<br />
+            in 31 hours ☕
           </h1>
           
           <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed max-w-xl mx-auto">
-            I build micro SaaS products in 31 hours. Using Cursor + Claude + coffee. 
-            No BS methodology, just results.
+            Using Cursor + Claude + coffee. No BS methodology, just results.
           </p>
           
           <div className="max-w-md mx-auto">
