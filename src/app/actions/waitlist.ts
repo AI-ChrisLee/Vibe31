@@ -41,3 +41,42 @@ export async function joinWaitlist(formData: FormData) {
     success: true
   }
 }
+
+export async function joinWaitlistEmail(formData: FormData) {
+  const email = formData.get("email") as string
+
+  if (!email) {
+    return {
+      success: false,
+      error: "Please enter your email"
+    }
+  }
+
+  const supabase = await createClient()
+
+  const { error } = await supabase
+    .from("waitlist")
+    .insert({
+      email: email.toLowerCase().trim(),
+      full_name: null
+    })
+
+  if (error) {
+    if (error.code === "23505") {
+      return {
+        success: false,
+        error: "You're already on the waitlist!"
+      }
+    }
+    
+    console.error("Waitlist submission error:", error)
+    return {
+      success: false,
+      error: "Something went wrong. Please try again."
+    }
+  }
+
+  return {
+    success: true
+  }
+}
