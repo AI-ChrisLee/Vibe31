@@ -60,7 +60,7 @@ export default function WaitlistPage() {
           </div>
           
           {/* Content */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 leading-normal md:leading-relaxed">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 leading-tight xl:leading-relaxed">
             Get my<br />
             <span className="bg-yellow-300 px-2 inline-block">Micro SaaS playbook</span><br />
             every Saturday.
