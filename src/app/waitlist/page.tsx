@@ -60,13 +60,13 @@ export default function WaitlistPage() {
           </div>
           
           {/* Content */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight" style={{ maxFontSize: '48px' }}>
             Get my<br />
             <span className="relative">
               <span className="absolute inset-x-0 bottom-0 h-[0.6em] bg-yellow-300"></span>
-              <span className="relative px-1">Micro SaaS playbook</span>
+              <span className="relative px-1">31-hour AI SaaS playbook</span>
             </span><br />
-            every Saturday.
+            delivered weekly.
           </h1>
           
           <p className="text-lg text-gray-700 mb-8 leading-relaxed max-w-xl mx-auto">
