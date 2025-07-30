@@ -18,7 +18,7 @@ export default function WaitlistPage() {
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
-      <div className="max-w-5xl xl:max-w-6xl w-full">
+      <div className="max-w-4xl w-full">
         <div className="text-center">
           {/* Logo */}
           <div className="mb-6">
@@ -60,9 +60,12 @@ export default function WaitlistPage() {
           </div>
           
           {/* Content */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 leading-tight xl:leading-relaxed">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 leading-tight">
             Get my<br />
-            <span className="bg-yellow-300 px-2 inline-block">Micro SaaS playbook</span><br />
+            <span className="relative">
+              <span className="absolute inset-x-0 bottom-0 h-[0.6em] bg-yellow-300"></span>
+              <span className="relative px-1">Micro SaaS playbook</span>
+            </span><br />
             every Saturday.
           </h1>
           
