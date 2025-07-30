@@ -46,10 +46,10 @@ export function SimpleWaitlistForm() {
           Welcome aboard! 🚀
         </h3>
         <p className="text-gray-700 mb-3">
-          Check your inbox to confirm your email.
+          Thanks for joining!
         </p>
         <p className="text-sm text-gray-600">
-          First issue drops this Saturday: &quot;How I Built ProfilePicAI to $3K MRR in 31 Hours&quot;
+          First drop in August: &quot;How I Built ProfilePicAI to $3K MRR in 31 Hours&quot;
         </p>
       </div>
     )
