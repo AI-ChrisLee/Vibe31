@@ -1,6 +1,6 @@
 'use client'
 
-import { ScrollToPricingButton } from "@/components/ScrollToPricingButton"
+import { WaitlistButton } from "@/components/WaitlistButton"
 import { heroA } from '../../variants/heroA.config'
 
 // Define the config type
@@ -114,8 +114,8 @@ export function HeroSection() {
             )}
             
             <div>
-              <ScrollToPricingButton 
-                text={config.ctaText}
+              <WaitlistButton 
+                text="Join the Waitlist →"
                 className="w-full sm:w-auto bg-gray-900 hover:bg-gray-800 text-white text-base sm:text-lg font-medium px-8 sm:px-10 py-3 sm:py-4 rounded-md shadow-sm transition-all hover:shadow-md"
               />
               

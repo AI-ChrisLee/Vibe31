@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ScrollToPricingButton } from './ScrollToPricingButton';
+import { ScrollToWaitlistButton } from './ScrollToWaitlistButton';
 
 export function CountdownBanner() {
   const [timeLeft, setTimeLeft] = useState({
@@ -12,8 +12,8 @@ export function CountdownBanner() {
   });
 
   useEffect(() => {
-    // Target date: August 7, 2025, 2PM PST
-    const targetDate = new Date('2025-08-07T14:00:00-08:00').getTime();
+    // Target date: TBD - set to a future date
+    const targetDate = new Date('2025-12-31T23:59:59-08:00').getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -49,7 +49,7 @@ export function CountdownBanner() {
         <div className="flex items-center justify-center gap-3 sm:gap-6 py-2 px-4">
           {/* Date */}
           <span className="text-gray-600 text-xs sm:text-sm font-medium">
-            August 7, 2PM PST
+            Coming Soon
           </span>
           
           {/* Countdown */}
@@ -64,8 +64,8 @@ export function CountdownBanner() {
           </div>
           
           {/* CTA */}
-          <ScrollToPricingButton 
-            text="Join" 
+          <ScrollToWaitlistButton 
+            text="Join Waitlist" 
             size="sm"
             className="bg-gray-900 hover:bg-gray-800 text-white font-medium px-3 sm:px-4 py-1 text-xs sm:text-sm rounded-md transition-colors shadow-sm" 
           />

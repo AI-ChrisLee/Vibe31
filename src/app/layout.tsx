@@ -12,12 +12,12 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Vibe31 - Build $10K Products in 48 Hours',
-  description: 'Master the Vibe Building system. Transform your agency from service provider to product builder. 29-day intensive starting July 31.',
-  keywords: ['agency transformation', 'product building', 'vibe building', '48 hour builds', 'agency products'],
+  title: 'Vibe31 - Join the Waitlist | Build 3 AI Apps in 1 Month',
+  description: 'Master AI tools that replace $300K developers. Build viral apps in 48 hours. Limited to 30 founding members.',
+  keywords: ['AI development', 'AI apps', 'no-code AI', 'AI tools', 'build AI apps', 'Cursor AI', 'Claude AI'],
   openGraph: {
-    title: 'Vibe31 - Build $10K Products in 48 Hours',
-    description: 'Transform your struggling agency into a product powerhouse this summer.',
+    title: 'Vibe31 - Join the Waitlist | Build 3 AI Apps in 1 Month',
+    description: 'Master AI tools that replace $300K developers. Build viral apps in 48 hours. Limited to 30 founding members.',
     type: 'website',
   },
 }
@@ -31,8 +31,8 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
       <body className="font-sans min-h-screen bg-white antialiased">
         <GoogleAnalytics />
-        <CountdownBanner />
-        <div className="pt-[40px]">
+        {/* <CountdownBanner /> */}
+        <div className="">
           {children}
         </div>
         <CookieConsent />

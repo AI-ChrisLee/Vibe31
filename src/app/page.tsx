@@ -1,5 +1,4 @@
-import { CheckoutButton } from "@/components/CheckoutButton"
-import { ScrollToPricingButton } from "@/components/ScrollToPricingButton"
+import { WaitlistButton } from "@/components/WaitlistButton"
 import { HeroSection } from "@/components/HeroSection"
 import Image from "next/image"
 
@@ -139,7 +138,7 @@ export default function Home() {
           <div className="mx-auto max-w-3xl text-center mb-12 md:mb-16 ">
             <p className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">What You&apos;ll Build</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 text-gray-900">Real Apps, Real Results</h2>
-            <p className="text-xl text-gray-600">Three viral AI apps in 31 days. Each worth <span className="bg-yellow-200 px-1">$20-40K</span>.</p>
+            <p className="text-xl text-gray-600">Three viral AI apps in 1 month. Each worth <span className="bg-yellow-200 px-1">$20-40K</span>.</p>
           </div>
           <div className="max-w-6xl mx-auto space-y-16">
             {/* App 1 - AI Headshot Generator */}
@@ -147,7 +146,7 @@ export default function Home() {
               <div className="order-1">
                 <div className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
                   <span className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center font-semibold text-gray-700">1</span>
-                  <span>Days 1-7</span>
+                  <span>Week 1</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-semibold mb-4 text-gray-900">AI Headshot Generator</h3>
                 <p className="text-gray-600 mb-6">Clone HeadshotPro or ProfilePicture.ai. Everyone needs professional headshots - charge $29-49 per set.</p>
@@ -230,7 +229,7 @@ export default function Home() {
               <div className="order-1 lg:order-2">
                 <div className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
                   <span className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center font-semibold text-gray-700">2</span>
-                  <span>Days 8-14</span>
+                  <span>Week 2</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-semibold mb-4 text-gray-900">AI Viral Shorts Generator</h3>
                 <p className="text-gray-600 mb-6">Clone OpusClip or Vidyo.ai. Turn long videos into viral shorts automatically.</p>
@@ -260,7 +259,7 @@ export default function Home() {
               <div className="order-1">
                 <div className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
                   <span className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center font-semibold text-gray-700">3</span>
-                  <span>Days 15-21</span>
+                  <span>Week 3</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-semibold mb-4 text-gray-900">AI Voice Note Transcriber</h3>
                 <p className="text-gray-600 mb-6">Clone Whisper Transcription or TurboScribe. Everyone hates typing - charge $10-20/month.</p>
@@ -319,18 +318,18 @@ export default function Home() {
         <div className="container">
           <div className="mx-auto max-w-4xl text-center mb-12 md:mb-16 ">
             <p className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">Challenge Overview</p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 text-gray-900">31 Days to <span className="bg-yellow-200 px-1">3 AI Apps</span></h2>
-            <p className="text-xl text-gray-600 mb-8">A 31-day intensive where you&apos;ll build 3 proven AI apps that companies pay $50K for - using nothing but AI tools.</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 text-gray-900">Build <span className="bg-yellow-200 px-1">3 AI Apps</span> in 1 Month</h2>
+            <p className="text-xl text-gray-600 mb-8">A 1-month intensive where you&apos;ll build 3 proven AI apps that companies pay $50K for - using nothing but AI tools.</p>
             
             {/* Key Info Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-12">
               <div className="bg-gray-50 rounded-lg p-4">
-                <p className="text-sm text-gray-600 mb-1">Dates</p>
-                <p className="font-black text-gray-900">Aug 7 - Aug 28</p>
+                <p className="text-sm text-gray-600 mb-1">Duration</p>
+                <p className="font-black text-gray-900">4 Weeks</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <p className="text-sm text-gray-600 mb-1">Format</p>
-                <p className="font-black text-gray-900">Live Thursdays 2PM PST</p>
+                <p className="font-black text-gray-900">Live Thursdays</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <p className="text-sm text-gray-600 mb-1">Investment</p>
@@ -347,7 +346,7 @@ export default function Home() {
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-center gap-2">
                   <span className="text-gray-600">✓</span>
-                  <span>Live Thursdays at 2PM PST</span>
+                  <span>Live Thursdays sessions</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-gray-600">✓</span>
@@ -417,19 +416,16 @@ export default function Home() {
       <section id="pricing-section" className="section bg-gray-50">
         <div className="container">
           <div className="mx-auto max-w-4xl text-center mb-12 md:mb-16 ">
-            <p className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">Investment</p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 text-gray-900">Only <span className="bg-yellow-200 px-1">30 Founding Members</span></h2>
+            <p className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">Coming Soon</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 text-gray-900">Join the Waitlist</h2>
+            <p className="text-xl text-gray-600 mb-8">Be the first to know when enrollment opens. Limited to 30 members.</p>
           </div>
           
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 md:gap-8 items-start">
-            <div className="bg-white rounded-xl lg:rounded-2xl shadow-xl overflow-hidden">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-white rounded-xl lg:rounded-2xl shadow-xl overflow-hidden max-w-2xl mx-auto">
               <div className="bg-gray-900 p-6 sm:p-8 text-center text-white">
-                <h3 className="text-xl sm:text-2xl font-semibold mb-2">Founding Member Price</h3>
-                <div className="flex items-baseline justify-center gap-2 mb-2">
-                  <span className="text-4xl sm:text-5xl font-semibold">$799</span>
-                  <span className="text-base text-gray-400 line-through">$1,299</span>
-                </div>
-                <p className="text-base text-gray-400">Goes to $1,299 after 30 members</p>
+                <h3 className="text-xl sm:text-2xl font-semibold mb-4">Vibe31 Challenge</h3>
+                <p className="text-base text-gray-400">Limited to 30 members</p>
               </div>
               
               <div className="p-6 space-y-6">
@@ -469,126 +465,30 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <div>
-                      <p className="font-bold text-gray-900">Client Acquisition Course ($297 value)</p>
-                      <p className="text-base text-gray-600">Get your first client in the first week</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <svg className="w-6 h-6 text-green-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <div>
                       <p className="font-bold text-gray-900">Money-Back Guarantee</p>
                       <p className="text-base text-gray-600">Build 1 app or get full refund</p>
                     </div>
                   </div>
                 </div>
                 
-                <CheckoutButton 
-                  text="Claim Your Spot →" 
+                <WaitlistButton 
+                  text="Join the Waitlist →" 
                   className="w-full bg-gray-900 hover:bg-gray-800 text-white text-lg font-medium px-8 py-4 rounded-lg shadow-md transition-all hover:shadow-lg" 
                 />
                 
                 <div className="text-center space-y-2 pt-4 border-t border-gray-100">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 rounded-lg">
-                    <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-50 rounded-lg">
+                    <svg className="w-5 h-5 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <p className="text-base font-bold text-green-700">
-                      Build 1 App or Money Back
+                    <p className="text-base font-bold text-yellow-700">
+                      Enrollment Opens Soon
                     </p>
                   </div>
-                  <p className="text-base text-gray-600 flex items-center justify-center gap-2">
-                    <svg className="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                    100% Secure Payment via Stripe
+                  <p className="text-base text-gray-600">
+                    Join the waitlist to secure your spot
                   </p>
                 </div>
-              </div>
-            </div>
-            
-            {/* Calendar */}
-            <div className="bg-white rounded-xl lg:rounded-2xl shadow-xl p-4 sm:p-6 lg:self-start">
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-black text-center mb-4 sm:mb-6">August 2025</h3>
-              
-              <div className="grid grid-cols-7 gap-1 sm:gap-2 text-center text-base">
-                {/* Days of week */}
-                <div className="font-bold text-gray-500 py-1 sm:py-2">Sun</div>
-                <div className="font-bold text-gray-500 py-1 sm:py-2">Mon</div>
-                <div className="font-bold text-gray-500 py-1 sm:py-2">Tue</div>
-                <div className="font-bold text-gray-500 py-1 sm:py-2">Wed</div>
-                <div className="font-bold text-gray-500 py-1 sm:py-2">Thu</div>
-                <div className="font-bold text-gray-500 py-1 sm:py-2">Fri</div>
-                <div className="font-bold text-gray-500 py-1 sm:py-2">Sat</div>
-                
-                {/* August dates */}
-                <div className="text-gray-400 py-1.5 sm:py-2 lg:py-3"></div>
-                <div className="text-gray-400 py-1.5 sm:py-2 lg:py-3"></div>
-                <div className="text-gray-400 py-1.5 sm:py-2 lg:py-3"></div>
-                <div className="text-gray-400 py-1.5 sm:py-2 lg:py-3"></div>
-                <div className="text-gray-400 py-1.5 sm:py-2 lg:py-3"></div>
-                <div className="py-1.5 sm:py-2 lg:py-3">1</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">2</div>
-                
-                {/* Week 2 - Aug 11-17 */}
-                <div className="py-1.5 sm:py-2 lg:py-3">3</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">4</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">5</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">6</div>
-                <div className="relative">
-                  <div className="bg-gray-900 text-white rounded sm:rounded-lg py-1.5 sm:py-2 lg:py-1.5 sm:py-2 lg:py-3 font-medium text-base">
-                    7
-                    <div className="text-xs font-medium">Start</div>
-                  </div>
-                </div>
-                <div className="py-1.5 sm:py-2 lg:py-3">8</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">9</div>
-                
-                {/* Week 3 - Aug 18-24 */}
-                <div className="py-1.5 sm:py-2 lg:py-3">10</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">11</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">12</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">13</div>
-                <div className="relative">
-                  <div className="bg-gray-900 text-white rounded sm:rounded-lg py-1.5 sm:py-2 lg:py-3 font-medium text-base">14</div>
-                </div>
-                <div className="py-1.5 sm:py-2 lg:py-3">15</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">16</div>
-                
-                {/* Week 4 - Aug 25-28 */}
-                <div className="py-1.5 sm:py-2 lg:py-3">17</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">18</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">19</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">20</div>
-                <div className="relative">
-                  <div className="bg-gray-900 text-white rounded sm:rounded-lg py-1.5 sm:py-2 lg:py-3 font-medium text-base">21</div>
-                </div>
-                <div className="py-1.5 sm:py-2 lg:py-3">22</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">23</div>
-                
-                {/* Final days */}
-                <div className="py-1.5 sm:py-2 lg:py-3">24</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">25</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">26</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">27</div>
-                <div className="relative">
-                  <div className="bg-gray-900 text-white rounded sm:rounded-lg py-1.5 sm:py-2 lg:py-3 font-medium text-base">
-                    28
-                    <div className="text-xs font-medium">Grad</div>
-                  </div>
-                </div>
-                <div className="py-1.5 sm:py-2 lg:py-3">29</div>
-                <div className="py-1.5 sm:py-2 lg:py-3">30</div>
-                
-                {/* Last days of August */}
-                <div className="py-1.5 sm:py-2 lg:py-3">31</div>
-              </div>
-              
-              <div className="mt-6 flex items-center justify-center gap-2">
-                <div className="w-4 h-4 bg-gray-900 rounded"></div>
-                <span className="text-base font-medium text-gray-600">Thursday Sessions</span>
               </div>
             </div>
           </div>
@@ -701,7 +601,7 @@ export default function Home() {
                 </summary>
                 <div className="px-4 pb-4 sm:pb-6 pt-2">
                   <p className="text-base font-medium text-gray-600 leading-relaxed">
-                    Simple: Build 1 working AI app or get your full $799 back. Show up to sessions, submit weekly builds, 
+                    Simple: Build 1 working AI app or get a full refund. Show up to sessions, submit weekly builds, 
                     and follow the system. If you still can&apos;t ship one app, I&apos;ll refund everything. No risk, only results. 
                     I&apos;m that confident in this system because it works.
                   </p>
@@ -717,74 +617,44 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 mb-4 sm:mb-6">
-              <span className="h-px w-8 sm:w-12 bg-gray-600"></span>
-              <p className="text-sm font-medium text-gray-400 uppercase tracking-wider">Final CTA</p>
-              <span className="h-px w-8 sm:w-12 bg-gray-600"></span>
+              <span className="h-px w-8 sm:w-12 bg-gray-400"></span>
+              <p className="text-sm font-medium text-gray-300 uppercase tracking-wider">Don't Miss Out</p>
+              <span className="h-px w-8 sm:w-12 bg-gray-400"></span>
             </div>
             
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 sm:mb-6 text-white">
               Ready to Build<br />
               <span className="bg-yellow-200 text-gray-900 px-2">
-                3 AI Apps in 31 Days?
+                3 AI Apps in 1 Month?
               </span>
             </h2>
             
-            <div className="max-w-3xl mx-auto mb-8 sm:mb-10">
-              <ol className="text-left inline-block space-y-3 text-lg text-gray-400">
-                <li className="flex items-center gap-3">
-                  <span className="text-gray-500 font-medium">1.</span>
-                  <span>Click &quot;Apply for Vibe31&quot; below</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-gray-500 font-medium">2.</span>
-                  <span>Complete payment ($799 founding price)</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-gray-500 font-medium">3.</span>
-                  <span>Receive Whop community link 3 days before start</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-gray-500 font-medium">4.</span>
-                  <span>Start building August 7</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-gray-500 font-medium">5.</span>
-                  <span>Graduate with 3 live AI apps</span>
-                </li>
-              </ol>
-            </div>
+            <p className="text-lg sm:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+              Join the waitlist and be the first to know when enrollment opens. Limited to 30 members.
+            </p>
             
             <div className="space-y-6">
-              <ScrollToPricingButton 
-                text="Apply for Vibe31 →" 
+              <WaitlistButton 
+                text="Join the Waitlist →" 
                 className="w-full sm:w-auto bg-white hover:bg-gray-100 text-gray-900 text-base sm:text-lg font-medium px-8 sm:px-10 py-3 sm:py-4 rounded-lg shadow-md transition-all hover:shadow-lg" 
               />
               
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 lg:gap-8 text-base text-gray-500">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 lg:gap-8 text-base text-gray-300">
                 <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  <svg className="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
-                  <span>August 7 - August 28</span>
+                  <span>Limited to 30 members</span>
                 </div>
-                <span className="hidden sm:inline text-gray-700">•</span>
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span>Founding price: $799</span>
-                </div>
+                <span className="hidden sm:inline text-gray-500">•</span>
               </div>
             </div>
             
-            <p className="text-lg text-gray-500 mt-8">
-              <em>After 30 members: Price goes to $1,299. No direct access. Don&apos;t wait.</em>
-            </p>
             <div className="mt-16 pt-8 border-t border-gray-700">
-              <div className="flex flex-wrap items-center justify-center gap-4 text-base text-gray-500">
-                <a href="/terms" className="hover:text-gray-400 transition-colors">Terms of Service</a>
-                <span className="text-gray-700">•</span>
-                <a href="/privacy" className="hover:text-gray-400 transition-colors">Privacy Policy</a>
+              <div className="flex flex-wrap items-center justify-center gap-4 text-base text-gray-400">
+                <a href="/terms" className="hover:text-gray-200 transition-colors">Terms of Service</a>
+                <span className="text-gray-600">•</span>
+                <a href="/privacy" className="hover:text-gray-200 transition-colors">Privacy Policy</a>
               </div>
             </div>
           </div>
