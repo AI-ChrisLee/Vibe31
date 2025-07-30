@@ -5,12 +5,19 @@ import { joinWaitlistEmail } from "@/app/actions/waitlist"
 
 export function SimpleWaitlistForm() {
   const [email, setEmail] = useState("")
+  const [consent, setConsent] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    
+    if (!consent) {
+      setError("Please agree to receive marketing emails")
+      return
+    }
+    
     setIsSubmitting(true)
     setError(null)
     
@@ -67,6 +74,20 @@ export function SimpleWaitlistForm() {
         >
           {isSubmitting ? "Joining..." : "Get the Playbook"}
         </button>
+      </div>
+      
+      <div className="flex items-start gap-2">
+        <input
+          type="checkbox"
+          id="consent"
+          checked={consent}
+          onChange={(e) => setConsent(e.target.checked)}
+          className="mt-1 w-4 h-4 text-gray-900 border-gray-300 rounded focus:ring-gray-900"
+          disabled={isSubmitting}
+        />
+        <label htmlFor="consent" className="text-sm text-gray-600">
+          I agree to receive weekly emails about building micro SaaS products. Unsubscribe anytime.
+        </label>
       </div>
       
       {error && (
