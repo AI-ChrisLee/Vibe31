@@ -253,4 +253,36 @@
     opacity: 1;
     transform: translateY(0);
   }
+  
+  /* Emoji Rain Animations */
+  @keyframes fall {
+    to {
+      transform: translateY(calc(100vh + 100px));
+    }
+  }
+  
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0) rotate(-180deg);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2) rotate(10deg);
+    }
+    70% {
+      transform: scale(0.9) rotate(-5deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  .animate-fall {
+    animation: fall linear forwards;
+  }
+  
+  .animate-bounce-in {
+    animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
 }

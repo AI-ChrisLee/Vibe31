@@ -2,22 +2,34 @@
 
 import Image from "next/image"
 import { SimpleWaitlistForm } from "@/components/SimpleWaitlistForm"
+import { EmojiRain } from "@/components/EmojiRain"
 import { useState, useRef } from "react"
 
 export default function WaitlistPage() {
   const [hasClickedVideo, setHasClickedVideo] = useState(false)
+  const [showEmojiRain, setShowEmojiRain] = useState(false)
   const ctaRef = useRef<HTMLDivElement>(null)
 
   const handleVideoClick = () => {
-    setHasClickedVideo(true)
-    // Scroll to CTA section smoothly
-    setTimeout(() => {
-      ctaRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-    }, 100)
+    if (!hasClickedVideo) {
+      setHasClickedVideo(true)
+      setShowEmojiRain(true)
+      
+      // Hide emoji rain after 3 seconds
+      setTimeout(() => {
+        setShowEmojiRain(false)
+      }, 3000)
+      
+      // Scroll to CTA section smoothly
+      setTimeout(() => {
+        ctaRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }, 1500)
+    }
   }
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
+      <EmojiRain isActive={showEmojiRain} />
       <div className="max-w-4xl w-full">
         <div className="text-center">
           {/* Logo */}
